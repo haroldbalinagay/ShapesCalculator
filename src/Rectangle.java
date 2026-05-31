@@ -1,22 +1,22 @@
 public class Rectangle {
-    double length;
-    double width;
-    Rectangle(double length, double width) {
-        setLength(length);
+    private double height;
+    private double width;
+    Rectangle(double height, double width) {
+        setHeight(height);
         setWidth(width);
     }
-    double getLength() {
-        return length;
+    double getHeight() {
+        return height;
     }
     double getWidth() {
         return width;
     }
-    void setLength(double length){
-        if (length <= 0){
+    void setHeight(double height){
+        if (height <= 0){
             IO.println("Error length must be a positive number");
             return;
         }
-        this.length = length;
+        this.height = height;
     }
     void setWidth(double width){
         if (width <= 0){
@@ -26,9 +26,9 @@ public class Rectangle {
         this.width = width;
     }
     double calculateArea(){
-        return length * width;
+        return height * width;
     }
     double calculatePerimeter(){
-        return (length + width) * 2;
+        return (height + width) * 2;
     }
 }
