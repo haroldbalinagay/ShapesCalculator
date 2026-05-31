@@ -1,6 +1,5 @@
 public class Circle {
     double radius;
-    final double PI = 3.14;
     Circle(double radius) {
         setRadius(radius);
     }
@@ -15,9 +14,12 @@ public class Circle {
         this.radius = radius;
     }
     double calculateArea() {
-        return PI * (radius * radius);
+        return Math.PI * (radius * radius);
     }
     double calculatePerimeter() {
-        return PI * radius * 2;
+        return Math.PI * radius * 2;
+    }
+    double calculateDiameter(){
+        return radius *2;
     }
 }
