@@ -28,7 +28,7 @@ public class Rectangle {
     double calculateArea(){
         return length * width;
     }
-    double calculateperimeter(){
+    double calculatePerimeter(){
         return (length + width) * 2;
     }
 }
