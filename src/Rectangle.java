@@ -1,7 +1,7 @@
 public class Rectangle {
     private double height;
     private double width;
-    Rectangle(double height, double width) {
+    Rectangle(double width, double height) {
         setHeight(height);
         setWidth(width);
     }
