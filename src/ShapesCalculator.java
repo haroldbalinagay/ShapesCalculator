@@ -15,6 +15,8 @@ public class ShapesCalculator {
         IO.println(testCirlce.calculateArea());
         IO.println(testCirlce.calculatePerimeter());
         IO.println(testCirlce.calculateDiameter());
+        Ellipse testEllipse = new Ellipse(3.14,3.14);
+        IO.println(testEllipse.calculatePerimeter());
     }
 }
 
