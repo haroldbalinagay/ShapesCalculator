@@ -7,8 +7,9 @@ public class Square {
     // Constructor
     // UNDERSTAND: Called when a new Square object is created - initializes object state
     // DECISION:  Uses setter to validate input.
-    Square(double side) {
+    Square(double side,boolean filled) {
         setSide(side);
+        setFilled(filled);
     }
     // UNDERSTAND: Provides access to private field
     // DECISION: No validation needed in getter, only returning value of side.
@@ -41,5 +42,29 @@ public class Square {
     // DECISION: follow Single Responsibility Principle
     public double calculatePerimeter(){
         return 4 * side;
+    }
+    public void printSquare() {
+        if (filled) {
+            IO.println("Filled Square:");
+        }
+        else{
+            IO.println("Hollow Square:");
+        }
+        for (int i = 0; i < Math.round(side); i++) {
+            for (int j = 0; j < Math.round(side); j++) {
+                if (filled) {
+                    IO.print("* ");
+                }
+                else {
+                    if (i == 0||i == (Math.round(side)-1) || j == 0 || j == (Math.round(side)-1)) {
+                        IO.print("* ");
+                    }
+                    else {
+                        IO.print("  ");
+                    }
+                }
+            }
+            IO.println("");
+        }
     }
 }
