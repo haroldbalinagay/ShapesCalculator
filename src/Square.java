@@ -50,12 +50,16 @@ public class Square {
         else{
             IO.println("Hollow Square:");
         }
+        // UNDERSTAND: Rounded sides to accommodate more accurate representation
+        // DECISION: use Math.round on side
         for (int i = 0; i < Math.round(side); i++) {
             for (int j = 0; j < Math.round(side); j++) {
                 if (filled) {
                     IO.print("* ");
                 }
                 else {
+                    // UNDERSTAND: Needs to print only on borders
+                    // DECISION: Used conditional statement to print only on specific lines.
                     if (i == 0||i == (Math.round(side)-1) || j == 0 || j == (Math.round(side)-1)) {
                         IO.print("* ");
                     }
