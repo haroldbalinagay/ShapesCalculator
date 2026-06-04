@@ -3,6 +3,7 @@ public class Square {
     // UNDERSTAND: Private restricts access with the use of getter/setters.
 // DECISION: side is stored as double to support fractional measurements.
     private double side;
+    private boolean filled;
     // Constructor
     // UNDERSTAND: Called when a new Square object is created - initializes object state
     // DECISION:  Uses setter to validate input.
@@ -13,6 +14,12 @@ public class Square {
     // DECISION: No validation needed in getter, only returning value of side.
     public double getSide() {
         return side;
+    }
+    public boolean isFilled() {
+        return filled;
+    }
+    public void setFilled(boolean filled) {
+        this.filled = filled;
     }
     //UNDERSTAND: Modifies the value of the object with checking for valid input
     //DECISION: Returns when input is invalid to not change property.
