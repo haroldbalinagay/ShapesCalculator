@@ -5,30 +5,30 @@ public class Triangle {
         setHeight(height);
         setBase(base);
     }
-    double getHeight() {
+    public double getHeight() {
         return height;
     }
-    double getBase() {
+    public double getBase() {
         return base;
     }
-    void setHeight(double height){
+    public void setHeight(double height){
         if (height <= 0){
             IO.println("Error height must be a positive number");
             return;
         }
         this.height = height;
     }
-    void setBase(double base){
+    public void setBase(double base){
         if (base <= 0){
             IO.println("Error base must be a positive number");
             return;
         }
         this.base = base;
     }
-    double calculateArea(){
+    public double calculateArea(){
         return (height * base)/2;
     }
-    double calculatePerimeter(){
+    public double calculatePerimeter(){
         return base * 3;
     }
 }
