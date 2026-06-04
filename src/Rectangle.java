@@ -13,14 +13,14 @@ public class Rectangle {
     }
     public void setHeight(double height){
         if (height <= 0){
-            IO.println("Error length must be a positive number");
+            IO.println("Error height must be a positive number");
             return;
         }
         this.height = height;
     }
     public void setWidth(double width){
         if (width <= 0){
-            IO.println("Error length must be a positive number");
+            IO.println("Error width must be a positive number");
             return;
         }
         this.width = width;
