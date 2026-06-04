@@ -1,12 +1,19 @@
 public class Rectangle {
+    // UNDERSTAND: Private restricts access with the use of getter/setters.
+    // DECISION: dimensions is stored as double to support fractional measurements.
     private double height;
     private double width;
     private boolean filled;
+    // Constructor
+    // UNDERSTAND: Called when a new Square object is created initializes object state
+    // DECISION:  Uses setter to validate input.
     Rectangle(double width, double height, boolean filled) {
         setHeight(height);
         setWidth(width);
         setFilled(filled);
     }
+    // UNDERSTAND: Provides access to private field
+    // DECISION: No validation needed in getter, only returning value of measurement.
     public double getHeight() {
         return height;
     }
@@ -16,6 +23,8 @@ public class Rectangle {
     public boolean isFilled(){
         return filled;
     }
+    //UNDERSTAND: Modifies the value of the object with checking for valid input
+    //DECISION: Returns when input is invalid to not change property.
     public void setFilled(boolean filled){
         this.filled = filled;
     }
@@ -33,9 +42,15 @@ public class Rectangle {
         }
         this.width = width;
     }
+    // Method to calculate area
+    // UNDERSTAND: Returns area of a rectangle = height * width.
+    // DECISION: follow Single Responsibility Principle
     public double calculateArea(){
         return height * width;
     }
+    // Method to calculate perimeter
+    // UNDERSTAND: Returns perimeter of a rectangle = (height + width) * 2
+    // DECISION: follow Single Responsibility Principle
     public double calculatePerimeter(){
         return (height + width) * 2;
     }
