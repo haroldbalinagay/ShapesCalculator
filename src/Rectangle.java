@@ -5,30 +5,30 @@ public class Rectangle {
         setHeight(height);
         setWidth(width);
     }
-    double getHeight() {
+    public double getHeight() {
         return height;
     }
-    double getWidth() {
+    public double getWidth() {
         return width;
     }
-    void setHeight(double height){
+    public void setHeight(double height){
         if (height <= 0){
             IO.println("Error length must be a positive number");
             return;
         }
         this.height = height;
     }
-    void setWidth(double width){
+    public void setWidth(double width){
         if (width <= 0){
             IO.println("Error length must be a positive number");
             return;
         }
         this.width = width;
     }
-    double calculateArea(){
+    public double calculateArea(){
         return height * width;
     }
-    double calculatePerimeter(){
+    public double calculatePerimeter(){
         return (height + width) * 2;
     }
 }

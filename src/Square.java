@@ -1,22 +1,22 @@
 public class Square {
-    double side;
+    private double side;
     Square(double side) {
         setSide(side);
     }
-    double getSide() {
+    public double getSide() {
         return side;
     }
-    void setSide(double side){
+    public void setSide(double side){
     if (side <= 0){
         IO.println("Error side must be a positive number");
         return;
     }
     this.side = side;
     }
-    double calculateArea(){
+    public double calculateArea(){
         return side * side;
     }
-    double calculatePerimeter(){
+    public double calculatePerimeter(){
         return 4 * side;
     }
 }

@@ -1,22 +1,22 @@
 public class Cube{
-    double side;
+    private double side;
     Cube(double side) {
         setSide(side);
     }
-    double getSide() {
+    public double getSide() {
         return side;
     }
-    void setSide(double side){
+    public void setSide(double side){
         if (side <= 0){
             IO.println("Error side must be a positive number");
             return;
         }
         this.side = side;
     }
-    double calculateSurfaceArea(){
+    public double calculateSurfaceArea(){
         return 6 * side * side;
     }
-    double calculateVolume(){
+    public double calculateVolume(){
         return side * side * side;
     }
 }
