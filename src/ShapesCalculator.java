@@ -19,16 +19,36 @@ public class ShapesCalculator {
             }
         }
     }
-    void twoDShapes(){
-        IO.println("=====================================================");
-        IO.println("                2D Shapes Calculator");
-        IO.println("=====================================================");
-        IO.println("1. Square");
-        IO.println("2. Rectangle");
-        IO.println("3. Circle");
-        IO.println("4. Ellipse");
-        IO.println("5. Triangle");
-        IO.println("6. Exit");
+    void twoDShapes() {
+        int choice = 0;
+        while (choice != 6) {
+            IO.println("=====================================================");
+            IO.println("                2D Shapes Calculator");
+            IO.println("=====================================================");
+            IO.println("1. Square");
+            IO.println("2. Rectangle");
+            IO.println("3. Circle");
+            IO.println("4. Ellipse");
+            IO.println("5. Triangle");
+            IO.println("6. Exit");
+            choice = Integer.parseInt(IO.readln("Enter your choice (1-6) "));
+            switch (choice) {
+                case 1: IO.println("\nSquare:");
+                        double side = Integer.parseInt(IO.readln("Enter side length: "));
+                        Square square = new Square(side,true);
+                        IO.println("\nResults:");
+                        IO.println("Perimeter: " + square.calculatePerimeter());
+                        IO.println("Area: " + square.calculateArea());
+                        break;
+                case 2: break;
+                case 3: break;
+                case 4: break;
+                case 5: break;
+                case 6: break;
+                default:
+                    IO.println("Please enter a valid input");
+            }
+        }
     }
 }
 
