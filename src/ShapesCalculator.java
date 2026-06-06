@@ -1,22 +1,32 @@
 public class ShapesCalculator {
     void main(){
-        Square testSquare = new Square(2.6);
-        IO.println(testSquare.getSide());
-        IO.println(testSquare.calculateArea());
-        IO.println(testSquare.calculatePerimeter());
-        Rectangle testRectangle = new Rectangle(2.4,6.7);
-        IO.println(testRectangle.getHeight());
-        IO.println(testRectangle.getWidth());
-        IO.println(testRectangle.calculateArea());
-        IO.println(testRectangle.calculatePerimeter());
-        double testRadius = 3.14;
-        Circle testCirlce = new Circle(testRadius);
-        IO.println(testCirlce.getRadius());
-        IO.println(testCirlce.calculateArea());
-        IO.println(testCirlce.calculatePerimeter());
-        IO.println(testCirlce.calculateDiameter());
-        Ellipse testEllipse = new Ellipse(3.14,3.14);
-        IO.println(testEllipse.calculatePerimeter());
+        int choice = 0;
+        while (choice !=3){
+            IO.println("=====================================================");
+            IO.println("                GEOMETRY CALCULATOR");
+            IO.println("=====================================================");
+            IO.println("1. 2D Shapes Calculator");
+            IO.println("1. 3D Shapes Calculator");
+            IO.println("3. Exit");
+            IO.println("=====================================================");
+            choice = Integer.parseInt(IO.readln("Enter your choice (1-3)"));
+            switch (choice){
+                case 1:twoDShapes();
+                //case 2:threeDShapes();
+                case 3: break;
+            }
+        }
+    }
+    void twoDShapes(){
+        IO.println("=====================================================");
+        IO.println("                2D Shapes Calculator");
+        IO.println("=====================================================");
+        IO.println("1. 2D Shapes Calculator");
+        IO.println("1. 3D Shapes Calculator");
+        IO.println("3. Exit");
+        IO.println("4. 2D Shapes Calculator");
+        IO.println("5. 3D Shapes Calculator");
+        IO.println("6. Exit");
     }
 }
 
