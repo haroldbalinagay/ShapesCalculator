@@ -30,7 +30,7 @@ public class ShapesCalculator {
             IO.println("3. Circle");
             IO.println("4. Ellipse");
             IO.println("5. Triangle");
-            IO.println("6. Exit");
+            IO.println("6. Return to Main Menu");
             choice = Integer.parseInt(IO.readln("Enter your choice (1-6) "));
             switch (choice) {
                 case 1: IO.println("\nSquare:");
