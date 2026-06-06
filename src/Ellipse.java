@@ -55,4 +55,39 @@ public class Ellipse {
     public boolean isCircle(){
         return (semiMajorAxis == semiMinorAxis);
     }
+    public void printEllipse(){
+        if (filled) {
+            IO.println("Filled Ellipse, Semi Major = " + Math.round(semiMajorAxis) + " Semi Minor = " + Math.round(semiMinorAxis) +":");
+        }
+        else {
+            IO.println("Hollow Ellipse, Semi Major = " + Math.round(semiMajorAxis) + " Semi Minor = " + Math.round(semiMinorAxis) +":");
+        }
+        int a = (int) Math.round(semiMajorAxis);
+        int b = (int) Math.round(semiMinorAxis);
+        int limit = a * a * b * b;
+
+        for (int i = -b; i <= b; i++) {
+            for (int j = -a; j <= a; j++) {
+                int currentPos = (j * j * b * b) + (i * i * a * a);
+
+                if (filled) {
+                    if (currentPos <= limit) {
+                        IO.print("* ");
+                    } else {
+                        IO.print("  ");
+                    }
+                } else {
+                    int nextX = ((Math.abs(j) + 1) * (Math.abs(j) + 1) * b * b) + (i * i * a * a);
+                    int nextY = (j * j * b * b) + ((Math.abs(i) + 1) * (Math.abs(i) + 1) * a * a);
+
+                    if (currentPos <= limit && (nextX >= limit || nextY >= limit)) {
+                        IO.print("* ");
+                    } else {
+                        IO.print("  ");
+                    }
+                }
+            }
+            IO.println("");
+        }
+    }
 }
