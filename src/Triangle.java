@@ -1,15 +1,20 @@
 public class Triangle {
     private double height;
     private double base;
-    Triangle(double base, double height) {
+    private boolean filled;
+    Triangle(double base, double height, boolean filled) {
         setHeight(height);
         setBase(base);
+        setFilled(filled);
     }
     public double getHeight() {
         return height;
     }
     public double getBase() {
         return base;
+    }
+    public boolean isFilled(){
+        return filled;
     }
     public void setHeight(double height){
         if (height <= 0){
@@ -24,6 +29,9 @@ public class Triangle {
             return;
         }
         this.base = base;
+    }
+    public void setFilled(boolean filled){
+        this.filled = filled;
     }
     public double calculateArea(){
         return (height * base)/2;
