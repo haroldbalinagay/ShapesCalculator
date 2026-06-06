@@ -1,7 +1,9 @@
 public class Circle {
     private double radius;
-    Circle(double radius) {
+    private boolean filled;
+    Circle(double radius, boolean filled) {
         setRadius(radius);
+        setFilled(filled);
     }
     public double getRadius() {
         return radius;
@@ -12,6 +14,12 @@ public class Circle {
             return;
         }
         this.radius = radius;
+    }
+    public boolean isFilled(){
+        return filled;
+    }
+    public void setFilled(boolean filled){
+        this.filled = filled;
     }
     public double calculateArea() {
         return Math.PI * (radius * radius);
