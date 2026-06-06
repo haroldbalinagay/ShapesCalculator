@@ -39,4 +39,37 @@ public class Triangle {
     public double calculatePerimeter(){
         return base * 3;
     }
+    public void printTriangle() {
+        if (filled) {
+            IO.println("Filled Triangle, base = " + Math.round(base) + ", height = " + Math.round(height) + ":");
+        } else {
+            IO.println("Hollow Triangle, base = " + Math.round(base) + ", height = " + Math.round(height) + ":");
+        }
+        int h = (int) Math.round(height);
+        int b = (int) Math.round(base);
+        int center = b / 2;
+        int denom = (h > 1) ? 2 * (h - 1) : 1;
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < b; j++) {
+                int distanceFromMid = Math.abs(j - center);
+                boolean isInside = (h > 1) ? (distanceFromMid * denom <= i * b) : true;
+                if (filled) {
+                    if (isInside) {
+                        IO.print("* ");
+                    } else {
+                        IO.print("  ");
+                    }
+                } else {
+                    boolean isBottom = (i == h - 1);
+                    boolean nextXOutside = (h > 1) ? (((distanceFromMid + 1) * denom) > i * b) : false;
+                    if (isInside && (isBottom || nextXOutside || i == 0)) {
+                        IO.print("* ");
+                    } else {
+                        IO.print("  ");
+                    }
+                }
+            }
+            IO.println("");
+        }
+    }
 }
