@@ -6,10 +6,12 @@ public class Ellipse {
         if (Axis1 > Axis2){
             setSemiMajorAxis(Axis1);
             setSemiMinorAxis(Axis2);
+            setFilled(filled);
         }
         else{
             setSemiMajorAxis(Axis2);
             setSemiMinorAxis(Axis1);
+            setFilled(filled);
         }
     }
     public double getSemiMajorAxis() {
