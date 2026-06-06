@@ -1,7 +1,8 @@
 public class Ellipse {
     private double semiMajorAxis;
     private double semiMinorAxis;
-    Ellipse(double Axis1, double Axis2) {
+    private boolean filled;
+    Ellipse(double Axis1, double Axis2,boolean filled) {
         if (Axis1 > Axis2){
             setSemiMajorAxis(Axis1);
             setSemiMinorAxis(Axis2);
@@ -16,6 +17,9 @@ public class Ellipse {
     }
     public double getSemiMinorAxis() {
         return semiMinorAxis;
+    }
+    public boolean isFilled(){
+        return filled;
     }
     public void setSemiMajorAxis(double semiMajorAxis) {
         if (semiMajorAxis <= 0) {
@@ -34,6 +38,9 @@ public class Ellipse {
             return;
         }
         this.semiMinorAxis = semiMinorAxis;
+    }
+    public void setFilled(boolean filled){
+        this.filled = filled;
     }
     public double calculateArea() {
         return Math.PI * semiMajorAxis * semiMinorAxis;
