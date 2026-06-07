@@ -48,6 +48,7 @@ public class ShapesCalculator {
                     IO.println("\nResults:");
                     IO.println(String.format("Perimeter: %.2f", square.calculatePerimeter()));
                     IO.println(String.format("Area: %.2f", square.calculateArea()));
+                    square.printSquare();
                     break;
                 case 2:
                     IO.println("\nRectangle:");
@@ -57,6 +58,7 @@ public class ShapesCalculator {
                     IO.println("\nResults:");
                     IO.println(String.format("Perimeter: %.2f", rectangle.calculatePerimeter()));
                     IO.println(String.format("Area: %.2f", rectangle.calculateArea()));
+                    rectangle.printRectangle();
                     break;
                 case 3:
                     IO.println("\nCircle:");
@@ -65,6 +67,7 @@ public class ShapesCalculator {
                     IO.println("\nResults:");
                     IO.println(String.format("Perimeter: %.2f", circle.calculatePerimeter()));
                     IO.println(String.format("Area: %.2f", circle.calculateArea()));
+                    circle.printCircle();
                     break;
                 case 4:
                     IO.println("\nEllipse:");
@@ -74,6 +77,7 @@ public class ShapesCalculator {
                     IO.println("\nResults:");
                     IO.println(String.format("Perimeter: %.2f", ellipse.calculatePerimeter()));
                     IO.println(String.format("Area: %.2f", ellipse.calculateArea()));
+                    ellipse.printEllipse();
                     break;
                 case 5:
                     IO.println("\nTriangle:");
@@ -83,6 +87,7 @@ public class ShapesCalculator {
                     IO.println("\nResults:");
                     IO.println(String.format("Perimeter: %.2f", triangle.calculatePerimeter()));
                     IO.println(String.format("Area: %.2f", triangle.calculateArea()));
+                    triangle.printTriangle();
                     break;
                 case 6:
                     break;
